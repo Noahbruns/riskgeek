@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="at.ac.tuwien.ifs.sge.sge-mctsagent" target="11" />
+      <module name="at.ac.tuwien.ifs.sge.sge-mctsagent.main" target="11" />
+      <module name="at.ac.tuwien.ifs.sge.sge-mctsagent.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

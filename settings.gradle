@@ -1,2 +1,0 @@
-rootProject.name = 'RiskGeek'
-include 'strategy-game-engine', 'sge-risk'
