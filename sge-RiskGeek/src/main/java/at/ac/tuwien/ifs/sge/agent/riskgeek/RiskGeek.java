@@ -83,9 +83,10 @@ public class RiskGeek<G extends Game<A, ?>, A> extends AbstractGameAgent<G, A> i
 
   @Override
   public A computeNextAction(G game, long computationTime, TimeUnit timeUnit) {
-
+    // Timeout
     super.setTimers(computationTime, timeUnit);
 
+    // What is going on here???
     log.tra_("Searching for root of tree");
     boolean foundRoot = Util.findRoot(mcTree, game);
     if (foundRoot) {
@@ -94,6 +95,7 @@ public class RiskGeek<G extends Game<A, ?>, A> extends AbstractGameAgent<G, A> i
       log._trace(", failed.");
     }
 
+    // Check if move ends the game
     log.tra_("Check if best move will eventually end game: ");
     if (sortPromisingCandidates(mcTree, gameMcNodeMoveComparator.reversed())) {
       log._trace("Yes");
@@ -104,11 +106,13 @@ public class RiskGeek<G extends Game<A, ?>, A> extends AbstractGameAgent<G, A> i
 
     int looped = 0;
 
+    // Check confidence
     log.debf_("MCTS with %d simulations at confidence %.1f%%", mcTree.getNode().getPlays(),
         Util.percentage(mcTree.getNode().getWins(), mcTree.getNode().getPlays()));
 
     int printThreshold = 1;
 
+    // Big loop until timeout
     while (!shouldStopComputation()) {
 
       if (looped++ % printThreshold == 0) {
@@ -118,6 +122,7 @@ public class RiskGeek<G extends Game<A, ?>, A> extends AbstractGameAgent<G, A> i
       }
       Tree<McGameNode<A>> tree = mcTree;
 
+      // Perform selection and expansion and eventually simulate
       tree = mcSelection(tree);
       mcExpansion(tree);
       boolean won = mcSimulation(tree, 128, 2);
@@ -142,12 +147,14 @@ public class RiskGeek<G extends Game<A, ?>, A> extends AbstractGameAgent<G, A> i
             TimeUnit.NANOSECONDS,
             TimeUnit.NANOSECONDS));
 
+    // If it is a leaf, compare and check for best possible action
     if (mcTree.isLeaf()) {
       log._debug(". Could not find a move, choosing the next best greedy option.");
       return Collections.max(game.getPossibleActions(),
           (o1, o2) -> gameComparator.compare(game.doAction(o1), game.doAction(o2)));
     }
 
+    // If not a leaf, we already know the best action (previous action of child)
     return Collections.max(mcTree.getChildren(), gameMcTreeMoveComparator).getNode().getGame()
         .getPreviousAction();
   }
