@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d8212a7-6aa9-4d77-842e-a8d7a70761de" name="Changes" comment="updates" />
+    <list default="true" id="7d8212a7-6aa9-4d77-842e-a8d7a70761de" name="Changes" comment="workspace update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,11 +93,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.sge-alphabetaagent [jar]">
+  <component name="RunManager" selected="Application.Main Random v RiskGeek">
     <configuration name="Main Random v RiskGeek" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="at.ac.tuwien.ifs.sge.engine.cli.SgeCommand" />
       <module name="sge-risk.main" />
-      <option name="PROGRAM_PARAMETERS" value="match sge-risk/build/libs/sge-risk-1.0.2-exe.jar sge-randomagent/build/libs/sge-randomagent-1.0.1.jar sge-RiskGeek/build/libs/sge-riskgeek-1.0.1.jar" />
+      <option name="PROGRAM_PARAMETERS" value="match sge-risk/build/libs/sge-risk-1.0.2.jar sge-randomagent/build/libs/sge-randomagent-1.0.1.jar sge-RiskGeek/build/libs/sge-riskgeek-1.0.1.jar" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="at.ac.tuwien.ifs.sge.engine.cli.*" />
@@ -271,7 +271,7 @@
       <workItem from="1651651043545" duration="1008000" />
       <workItem from="1651652067382" duration="2361000" />
       <workItem from="1651654446459" duration="1328000" />
-      <workItem from="1651655786927" duration="446000" />
+      <workItem from="1651655786927" duration="970000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1651655159750</created>
@@ -294,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651656113753</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="workspace update">
+      <created>1651656438827</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651656438827</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +322,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="update" />
     <MESSAGE value="updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates" />
+    <MESSAGE value="workspace update" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

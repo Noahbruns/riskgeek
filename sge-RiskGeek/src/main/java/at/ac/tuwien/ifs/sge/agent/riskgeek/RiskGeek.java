@@ -288,8 +288,8 @@ public class RiskGeek<G extends Game<A, ?>, A> extends AbstractGameAgent<G, A> i
   @Override
   public String toString() {
     if (instanceNr > 1 || RiskGeek.INSTANCE_NR_COUNTER > 2) {
-      return String.format("%s%d", "MctsAgent#", instanceNr);
+      return String.format("%s%d", "RiskGeek#", instanceNr);
     }
-    return "MctsAgent";
+    return "RiskGeek";
   }
 }
